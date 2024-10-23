@@ -7,9 +7,9 @@
         WriteNThrough1_While(22);
         WriteNThrough1_For(22);
         WriteEvensThrough100();
-        FindSum(100);
-        FindSumOfEvenNumbers(4);
-        FindSumOfOddNumbers(4);
+        FindSum(-3);
+        FindSumOfEvenNumbers(-5);
+        FindSumOfOddNumbers(-5);
         OutputRightTriangle(4);
     }
     public static void Write1ThroughN_While(int n)
@@ -98,7 +98,15 @@
         }
         else
         {
-            OutOfRangeMessage(n);
+        int sum = 0;
+        int i = 1;
+        while (i >= n)
+        {
+            sum = sum + i;
+            i = i - 1;
+
+        }
+        Console.WriteLine(sum);
         }        
     }
     public static void FindSumOfEvenNumbers(int n)
@@ -115,7 +123,13 @@
         }
         else
         {
-            OutOfRangeMessage(n);
+            int sum = 0;
+        for (int i = 0; i >= n;)
+        {
+            sum = sum + i;
+            i = i - 2;
+        }
+        Console.WriteLine(sum);
         }        
     }
     public static void FindSumOfOddNumbers(int n)
@@ -123,7 +137,7 @@
         if (n >= 1)
         {
         int sum = 0;
-        for (int i =1; i <= n;)
+        for (int i = 1; i <= n;)
         {
             sum = sum + i;
             i = i + 2;
@@ -132,7 +146,13 @@
         }
         else
         {
-            OutOfRangeMessage(n);
+            int sum = 0;
+        for (int i = 1; i >= n;)
+        {
+            sum = sum + i;
+            i = i - 2;
+        }
+        Console.WriteLine(sum);
         }        
     }
     public static void OutputRightTriangle(int _base)
